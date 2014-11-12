@@ -71,14 +71,6 @@ inline int HAL_PIXEL_FORMAT_2_V4L2_PIX(int HAL_PIXEL_FORMAT)
         V4L2_PIX = V4L2_PIX_FMT_RGB32;
         break;
 
-    case HAL_PIXEL_FORMAT_RGBA_5551:
-        V4L2_PIX = V4L2_PIX_FMT_RGB555X;
-        break;
-
-    case HAL_PIXEL_FORMAT_RGBA_4444:
-        V4L2_PIX = V4L2_PIX_FMT_RGB444;
-        break;
-
     case HAL_PIXEL_FORMAT_YV12:
     case HAL_PIXEL_FORMAT_YCbCr_420_P:
         V4L2_PIX = V4L2_PIX_FMT_YUV420;
@@ -237,8 +229,6 @@ inline unsigned int FRAME_SIZE(int HAL_PIXEL_FORMAT, int w, int h)
     switch (HAL_PIXEL_FORMAT) {
     // 16bpp
     case HAL_PIXEL_FORMAT_RGB_565:
-    case HAL_PIXEL_FORMAT_RGBA_5551:
-    case HAL_PIXEL_FORMAT_RGBA_4444:
         frame_size = GET_16BPP_FRAME_SIZE(w, h);
         break;
 

@@ -3215,7 +3215,7 @@ static void responseRilSignalStrengthV5(Parcel &p, RIL_SignalStrength_v10 *p_cur
                 (gsmSignalStrength > 31 && p_cur->GW_SignalStrength.signalStrength != 99)) {
             gsmSignalStrength = p_cur->CDMA_SignalStrength.dbm;
         }
-#endif
+#else
         if (gsmSignalStrength < 0) {
             gsmSignalStrength = 99;
         } else if (gsmSignalStrength > 31 && gsmSignalStrength != 99) {

@@ -141,7 +141,6 @@ struct private_handle_t {
     
     /* Following members are for ION memory only */
     int     ion_client;
-    void   *ion_memory;
 
 #ifdef __cplusplus
     static const int sNumInts = 21;
